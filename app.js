@@ -43,10 +43,10 @@ window.addEventListener('scroll', function () {
 //    scrollTo(contact);
 // })
 
-const buttons = document.querySelectorAll('.nav-buttons');
-buttons.forEach(button => {
-   button.addEventListener('click', function () {
-      buttons.forEach(btn => btn.classList.remove('selected'));
+const links = document.querySelectorAll('.nav-links');
+links.forEach(link => {
+   link.addEventListener('click', function () {
+      links.forEach(btn => btn.classList.remove('selected'));
       this.classList.add('selected');
    });
 });
