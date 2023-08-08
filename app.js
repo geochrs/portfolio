@@ -7,41 +7,41 @@ window.addEventListener('scroll', function () {
    }
 });
 
-const homeBtn = document.querySelectorAll('.nav-buttons')[0];
-homeBtn.addEventListener('click', () => {
-   document.documentElement.scrollTop = 0;
-});
+// const homeBtn = document.querySelectorAll('.nav-buttons')[0];
+// homeBtn.addEventListener('click', () => {
+//    document.documentElement.scrollTop = 0;
+// });
 
-const about = {
-   btn: document.querySelectorAll('.nav-buttons')[1],
-   tag: document.querySelector('#aboutNav')
-};
+// const about = {
+//    btn: document.querySelectorAll('.nav-buttons')[0],
+//    tag: document.querySelector('#aboutNav')
+// };
 
-const work = {
-   btn: document.querySelectorAll('.nav-buttons')[2],
-   tag: document.querySelector('#workNav')
-};
+// const work = {
+//    btn: document.querySelectorAll('.nav-buttons')[1],
+//    tag: document.querySelector('#workNav')
+// };
 
-const contact = {
-   btn: document.querySelectorAll('.nav-buttons')[3],
-   tag: document.querySelector('#contactNav')
-}
+// const contact = {
+//    btn: document.querySelectorAll('.nav-buttons')[2],
+//    tag: document.querySelector('#contactNav')
+// }
 
-function scrollTo(el) {
-   el.tag.scrollIntoView();
-}
+// function scrollTo(el) {
+//    el.tag.scrollIntoView();
+// }
 
-about.btn.addEventListener('click', function () {
-   scrollTo(about);
-})
+// about.btn.addEventListener('click', function () {
+//    scrollTo(about);
+// })
 
-work.btn.addEventListener('click', function () {
-   scrollTo(work);
-})
+// work.btn.addEventListener('click', function () {
+//    scrollTo(work);
+// })
 
-contact.btn.addEventListener('click', function () {
-   scrollTo(contact);
-})
+// contact.btn.addEventListener('click', function () {
+//    scrollTo(contact);
+// })
 
 const buttons = document.querySelectorAll('.nav-buttons');
 buttons.forEach(button => {
@@ -50,5 +50,3 @@ buttons.forEach(button => {
       this.classList.add('selected');
    });
 });
-
-ScrollReveal().reveal('.headline', { delay: 400 });

@@ -136,10 +136,6 @@ table {
 
 /* Code starts here  */
 
-html.sr .load-hidden {
-    visibility: hidden;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -156,8 +152,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-transform: uppercase;
-    font-weight: 500;
 }
 
 .sticky {
@@ -166,7 +160,7 @@ nav {
     width: 100%;
 }
 
-nav .gogos {
+nav .logo {
     margin-left: 5%;
 }
 
@@ -182,11 +176,8 @@ nav ul li:hover {
 }
 
 .nav-buttons {
-    padding: 0;
-    border: none;
-    background-color: inherit;
-    font-size: inherit;
-    font-weight: 700;
+    text-decoration: none;
+    font-weight: 500;
     text-transform: uppercase;
     color: #212529;
     transition: color 0.2s;
@@ -199,25 +190,6 @@ nav ul li:hover {
 
 .selected {
     color: #0056b3;
-}
-
-.resume-button {
-    text-decoration: none;
-    border: 1px solid #0056b3;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-right: auto;
-    margin-top: 0.5rem;
-    color: #212529;
-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-
-.resume-button:hover,
-.contact-button:hover {
-    background-color: #0056b3;
-    color: #f8f9fa;
-    box-shadow: 0 0.5em 0.5em -0.4em #0056b3;
-    transform: scale(1.07);
 }
 
 main {
@@ -265,15 +237,15 @@ h3 {
 }
 
 
-main .contact,
-main .work {
+main .contactNav,
+main .workNav {
     width: 100%;
     height: 400px;
 }
 
-main .about h2,
-main .work h2,
-main .contact h2 {
+main .aboutNav h2,
+main .workNav h2,
+main .contactNav h2 {
     font-weight: 500;
     margin-bottom: 2rem;
     font-size: 1.8rem;
@@ -284,11 +256,11 @@ main p {
     color: #495057;
 }
 
-main .about {
+main .aboutNav {
     /* height: 600px; */
     margin: 10% 15%;
     color: #343a40;
-    scroll-margin: 150px;
+    scroll-margin: 120px;
 }
 
 main .about-title h2 {
@@ -333,19 +305,20 @@ main .skills {
     text-align: left;
 }
 
-main .work {
+main .workNav {
     height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin: 120px;
 }
 
-main .work h2 {
+main .workNav h2 {
     position: relative;
 }
 
-main .work h2::before {
+main .workNav h2::before {
     content: "";
     position: absolute;
     left: 47%;
@@ -375,25 +348,26 @@ main .work h2::before {
     max-width: 100%;
 }
 
-main .contact {
+main .contactNav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    scroll-margin: 120px;
 }
 
-main .contact p {
+main .contactNav p {
     width: 40%;
     line-height: 1.5;
     font-size: 1.2rem;
     text-align: center;
 }
 
-main .contact h2 {
+main .contactNav h2 {
     position: relative;
 }
 
-main .contact h2::before {
+main .contactNav h2::before {
     content: "";
     position: absolute;
     left: 43%;
@@ -415,6 +389,24 @@ main .contact h2::before {
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
+.resume-button {
+    text-decoration: none;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 0.5rem;
+    color: #212529;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.resume-button:hover,
+.contact-button:hover {
+    background-color: #0056b3;
+    color: #f8f9fa;
+    box-shadow: 0 0.5em 0.5em -0.4em #0056b3;
+    transform: scale(1.07);
+}
+
 .footer {
     display: flex;
     justify-content: center;
@@ -422,6 +414,7 @@ main .contact h2::before {
     color: #495057;
 }
 
+/* 
 @media (max-width:1200px) {
     ul {
         margin-left: 50%;
@@ -500,4 +493,4 @@ main .contact h2::before {
     .gogos {
         display: none;
     }
-}
+} */

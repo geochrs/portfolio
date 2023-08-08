@@ -5,47 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>geochris</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal({ reset: true });
-    </script>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="navBar">
-        <img class="gogos" src="icons/1.png" alt="">
+        <a href="#" class="logo"><img src="icons/1.png" alt=""></a>
         <ul id="buttons-selected">
             <li>
-                <button class="nav-buttons">Home</button>
+                <a href="#about" class="nav-buttons">About</a>
             </li>
             <li>
-                <button class="nav-buttons">About</button>
+                <a href="#work" class="nav-buttons">Work</a>
             </li>
             <li>
-                <button class="nav-buttons">Work</button>
-            </li>
-            <li>
-                <button class="nav-buttons">Contact</button>
+                <a href="#contact" class="nav-buttons">Contact</a>
             </li>
         </ul>
     </nav>
-    <main class="load-hidden">
-        <section class="header-left headline">
+    <main>
+        <section class="header-left">
             <h1>Hi, my name is</h1>
             <h2>George Chr.</h2>
             <h3>I build things for the Web.</h3>
-            <a class="resume-button" href="#">Get CV</a>
         </section>
-        <section class="header-right headline">
+        <section class="header-right">
             <img class="image" src="icons/me3.png" alt="">
         </section>
-        <section id="aboutNav" class="about headline">
+        <section id="about" class="aboutNav">
             <div class="about-title">
                 <h2> About me</h2>
                 <p>Here you will find more information about me, what I do, and my current skills mostly <br>in terms of
@@ -83,7 +74,7 @@
                 </div>
             </div>
         </section>
-        <section id="workNav" class="work headline">
+        <section id="work" class="workNav">
             <h2>Some Things I've Built</h2>
             <section class="cards">
                 <article class="card">
@@ -117,11 +108,12 @@
                 </article>
             </section>
         </section>
-        <section id="contactNav" class="contact headline">
+        <section id="contact" class="contactNav">
             <h2>Get in Touch</h2>
             <p>My inbox is always open. Whether you have a
                 question or just want to say hi, I’ll try my best to get back to you!</p>
             <a class="contact-button" href="">Say Hello!</a>
+            <a class="resume-button" href="">Get CV</a>
         </section>
     </main>
     <footer class="footer">
