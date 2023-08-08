@@ -380,21 +380,23 @@ main .contactNav h2::before {
 }
 
 .contact-button {
+    display: inline-block;
     text-decoration: none;
     border: 1px solid #0056b3;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-top: 1.5rem;
+    margin-right: 0.5rem;
     color: #212529;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .resume-button {
+    display: inline-block;
     text-decoration: none;
     border: 1px solid #0056b3;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-top: 0.5rem;
+    margin-left: 0.5rem;
     color: #212529;
     transition: background-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -405,6 +407,10 @@ main .contactNav h2::before {
     color: #f8f9fa;
     box-shadow: 0 0.5em 0.5em -0.4em #0056b3;
     transform: scale(1.07);
+}
+
+.buttons {
+    padding-top: 25px;
 }
 
 .footer {
