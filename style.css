@@ -406,8 +406,12 @@ main .contactNav h2::before {
 .footer {
     display: flex;
     justify-content: center;
-    height: 50px;
     color: #495057;
+}
+
+.workNav,
+.contactNav {
+    margin-bottom: 2rem;
 }
 
 /* 
