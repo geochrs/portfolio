@@ -258,8 +258,7 @@ main p {
 
 main .aboutNav {
     /* height: 600px; */
-    margin: 10% 15%;
-    color: #343a40;
+    /* margin: 10% 15%; */
     scroll-margin: 120px;
 }
 
@@ -287,23 +286,21 @@ main .about-title p {
     text-align: center;
 }
 
-
 main .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10rem;
+    place-items: start center;
 }
 
-
-main .introduce {
+main .introduce p {
     line-height: 1.5;
     font-size: 1.2rem;
     text-align: justify;
 }
 
-main .skills {
+/* main .skills {
     text-align: left;
-}
+} */
 
 main .workNav {
     /* height: 800px; */
@@ -334,7 +331,6 @@ main .workNav h2::before {
     width: 60%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 15px;
     place-items: center;
 }
 
@@ -409,9 +405,10 @@ main .contactNav h2::before {
     color: #495057;
 }
 
+.aboutNav,
 .workNav,
 .contactNav {
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 /* 
