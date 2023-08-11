@@ -198,6 +198,10 @@ main {
     margin: 0 3rem;
 }
 
+main .headers {
+    display: flex;
+}
+
 main .header-left {
     flex: 1;
     display: flex;
@@ -288,19 +292,16 @@ main .about-title p {
 
 main .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     place-items: start center;
+    margin: 0 5rem;
 }
 
 main .introduce p {
     line-height: 1.5;
     font-size: 1.2rem;
-    text-align: justify;
+    /* text-align: justify; */
 }
-
-/* main .skills {
-    text-align: left;
-} */
 
 main .workNav {
     /* height: 800px; */
@@ -330,7 +331,7 @@ main .workNav h2::before {
 .cards {
     width: 60%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
 }
 
