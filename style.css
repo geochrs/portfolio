@@ -202,24 +202,31 @@ main .headers {
     display: flex;
 }
 
-main .header-left {
-    flex: 1;
+main .header-child {
     display: flex;
+    flex: 1;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-left: 15%;
-    margin-top: 2%;
+    align-content: center;
 }
 
-main .header-right {
-    flex: 1;
+/* main .header-left {
+     flex: 4; 
+     display: flex; 
+     flex-direction: column; 
+     margin-left: 15%; 
+     margin-top: 2%;
+} */
+
+/* main .header-right {
+     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 10%;
-    margin-top: 2%;
-
-}
+     margin-right: 10%;
+     margin-top: 2%;
+} */
 
 h1 {
     font-size: 30px;
