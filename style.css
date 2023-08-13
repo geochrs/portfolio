@@ -237,7 +237,8 @@ h2 {
     color: #343a40;
 }
 
-h3 {
+h3,
+.footer {
     color: #495057;
 }
 
@@ -281,10 +282,6 @@ main p {
     transform: skew(-12deg) translateX(-50%);
     background: rgba(0, 86, 179, 0.5);
     z-index: -1;
-}
-
-.about-title p {
-    margin-bottom: 5rem;
 }
 
 .about-grid {
@@ -366,12 +363,9 @@ main p {
     gap: 0.85rem;
 }
 
-.footer {
-    color: #495057;
-}
-
 .headers,
 .aboutSec,
+.about-title p,
 .workSec,
 .contactSec {
     margin-bottom: 5rem;
