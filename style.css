@@ -196,11 +196,11 @@ main {
     margin: 0 3rem;
 }
 
-main .headers {
+.headers {
     display: flex;
 }
 
-main .header-child {
+.header-child {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -210,28 +210,41 @@ main .header-child {
     line-height: 1.2;
 }
 
-h1 {
+.header-child h1 {
     font-size: 30px;
+}
+
+.header-child h2 {
+    font-size: 60px;
+}
+
+.header-child h3 {
+    font-size: 35px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
+h1 {
     color: #0056b3;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 1.8rem;
     color: #343a40;
 }
 
 h3 {
-    font-size: 35px;
     color: #495057;
 }
 
-main .aboutSec h2,
-main .workSec h2,
-main .contactSec h2 {
-    font-weight: 500;
+.aboutSec h2,
+.workSec h2,
+.contactSec h2 {
     margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: #343a40;
 }
 
 main p {
@@ -240,24 +253,25 @@ main p {
     line-height: 1.5;
 }
 
-main .aboutSec,
-main .workSec,
-main .contactSec {
+.aboutSec,
+.workSec,
+.contactSec {
     scroll-margin: 120px;
 }
 
-main .about-title,
-main .contactSec {
+.about-title,
+.contactSec,
+.footer {
     text-align: center;
 }
 
-main .about-title h2,
-main .workSec h2,
-main .contactSec h2 {
+.about-title h2,
+.workSec h2,
+.contactSec h2 {
     position: relative;
 }
 
-main .about-title h2::before {
+.about-title h2::before {
     content: "";
     position: absolute;
     right: 41%;
@@ -269,24 +283,24 @@ main .about-title h2::before {
     z-index: -1;
 }
 
-main .about-title p {
+.about-title p {
     margin-bottom: 5rem;
 }
 
-main .about-grid {
+.about-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     place-items: start center;
     margin: 0 5rem;
 }
 
-main .workSec {
+.workSec {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-main .workSec h2::before {
+.workSec h2::before {
     content: "";
     position: absolute;
     left: 47%;
@@ -315,7 +329,7 @@ main .workSec h2::before {
     max-width: 100%;
 }
 
-main .contactSec h2::before {
+.contactSec h2::before {
     content: "";
     position: absolute;
     left: 43%;
@@ -353,8 +367,6 @@ main .contactSec h2::before {
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
     color: #495057;
 }
 
