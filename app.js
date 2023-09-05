@@ -50,3 +50,14 @@ links.forEach(link => {
       this.classList.add('selected');
    });
 });
+
+
+const listOfCardElements = document.querySelectorAll('.skill-card');
+const cardContainer = document.querySelector('.card-container');
+
+listOfCardElements.forEach((cardElement, index) => {
+  cardElement.addEventListener('click', () => {
+    const scrollLeft = index * listOfCardElements[0].offsetWidth;
+    cardContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+  });
+});
