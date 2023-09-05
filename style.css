@@ -200,15 +200,16 @@ main {
 
 .headers {
     display: flex;
+    justify-content: space-around;
 }
 
 .header-child {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
-    align-content: center;
+    /* align-content: center; */
     line-height: 1.2;
 }
 
@@ -272,46 +273,17 @@ main p {
     text-align: center;
 }
 
-.about-title h2,
-.workSec h2,
-.contactSec h2 {
-    position: relative;
-}
-
-.about-title h2::before {
-    content: "";
-    position: absolute;
-    right: 41%;
-    bottom: -1px;
-    width: 125px;
-    height: 12px;
-    transform: skew(-12deg) translateX(-50%);
-    background: rgba(0, 86, 179, 0.5);
-    z-index: -1;
-}
-
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     margin: 0 5rem;
+    gap: 2rem;
 }
 
 .workSec {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.workSec h2::before {
-    content: "";
-    position: absolute;
-    left: 47%;
-    bottom: 0px;
-    width: 300px;
-    height: 12px;
-    transform: skew(-12deg) translateX(-50%);
-    background: rgba(0, 86, 179, 0.5);
-    z-index: -1;
 }
 
 .cards {
@@ -329,18 +301,6 @@ main p {
 
 .card>img {
     max-width: 100%;
-}
-
-.contactSec h2::before {
-    content: "";
-    position: absolute;
-    left: 43%;
-    bottom: -1px;
-    width: 160px;
-    height: 12px;
-    transform: skew(-12deg) translateX(-50%);
-    background: rgba(0, 86, 179, 0.5);
-    z-index: -1;
 }
 
 .contact-button,
@@ -391,13 +351,13 @@ main p {
     font-weight: 500;
     color: #495057;
     text-transform: uppercase;
-    margin: 20px 0;
 }
 
 .skill-bar {
     height: 14px;
     background: #282828;
     border-radius: 3px;
+    margin: 10px 0;
 }
 
 .skill-percentage {
