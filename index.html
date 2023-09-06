@@ -115,7 +115,8 @@
             <div class="contact-form">
                 <input class="person-name" type="text" name="name" id="name" placeholder="Name*" required>
                 <input class="person-email" type="email" name="email" id="email" placeholder="Email*" required>
-                <textarea class="person-text" name="message" id="message" placeholder="Enter your message*"></textarea>
+                <textarea class="person-text" name="message" id="message" placeholder="Enter your message*"
+                    required></textarea>
                 <button class="submit">Send Message!</button>
             </div>
         </section>
@@ -123,7 +124,16 @@
     <footer class="footer">
         <p>Copyright &copy;2023 | Designed & Built by George Chr</p>
     </footer>
+
+
     <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("HaJUWvxiA9x0CuOFf");
+        })();
+    </script>
 </body>
 
 </html>

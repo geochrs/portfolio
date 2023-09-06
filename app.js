@@ -50,3 +50,27 @@ links.forEach(link => {
       this.classList.add('selected');
    });
 });
+
+
+function sendMail() {
+   let params = {
+      from_name: document.querySelector('.person-name').value,
+      email_id: document.querySelector('.person-email').value,
+      message: document.querySelector('.person-text').value
+   }
+   emailjs.send('service_9ecsisg', 'template_c4nafhh', params).then(function (res) {
+      alert('Message sent');
+   })
+}
+
+const inputs = document.querySelectorAll('input');
+const textarea = document.querySelector('textarea');
+const buttonSubmit = document.querySelector('.submit');
+
+buttonSubmit.addEventListener('click', function (e) {
+   e.preventDefault();
+   sendMail();
+   inputs.forEach(input => input.value = '');
+   textarea.value = '';
+}
+);
