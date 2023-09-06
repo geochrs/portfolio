@@ -274,29 +274,23 @@ main p {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "about ."
+        ". about"
         "cards cards";
     margin: 0 5rem;
     gap: 2rem;
 }
 
-.about-row {
+.aboutme {
     grid-area: about;
 }
 
 .carousel {
-    display: flex;
-    justify-content: center;
     grid-area: cards;
-    height: 166px;
 }
 
 .card-container {
-    width: 80%;
     display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -305,18 +299,21 @@ main p {
 }
 
 .skill-card {
-    min-width: 250px;
+    min-width: 190px;
     height: 150px;
-    scroll-snap-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #4F5873;
+    flex-direction: column;
+    gap: 0.25rem;
     color: #4a544c;
     border-radius: 8px;
-    box-shadow: 0 0 0.02rem 0.02rem rgba(0, 0, 0, 0.21);
 }
 
+.skill-card img {
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.4));
+    border-radius: 10%;
+}
 
 .workSec {
     display: flex;
