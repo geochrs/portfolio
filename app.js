@@ -1,6 +1,6 @@
 const navbar = document.querySelector('.navBar');
 window.addEventListener('scroll', function () {
-   if (document.documentElement.scrollTop > 20) {
+   if (document.documentElement.scrollTop > 300) {
       navbar.classList.add('sticky');
    } else {
       navbar.classList.remove('sticky');

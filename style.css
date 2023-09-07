@@ -342,18 +342,30 @@ main p {
     max-width: 100%;
 }
 
+.contact-grid {
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+        "contact map";
+    gap: 2rem;
+}
+
 .contact-form {
     display: grid;
-    width: 50%;
-    height: 250px;
-    margin: 0 auto;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    height: 30vh;
+    align-self: center;
+    grid-area: contact;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-auto-rows: 0.7fr 2fr 0.7fr;
     grid-template-areas:
         "name name email email"
         "text text text text"
         "submit . . .";
-    gap: 0.5rem;
+    gap: 1rem;
+    filter: drop-shadow(0 0 0.05rem rgba(0, 0, 0, 0.2));
 }
 
 .person-name,
@@ -364,7 +376,7 @@ main p {
 .person-name,
 .person-email,
 .person-text {
-    border: 1px solid #495057;
+    border: 1px solid #a9b3bd;
     background-color: #e9ecef;
     border-radius: 5px;
     font-size: 1rem;
@@ -403,6 +415,19 @@ main p {
 .submit:hover {
     background-color: #02458b;
     transform: scale(1.02);
+}
+
+.contact-map {
+    grid-area: map;
+    display: grid;
+    grid-template-areas: "iframe";
+    margin: 0 auto;
+    grid-template-columns: minmax(250px, 1fr);
+}
+
+iframe {
+    height: 42vh;
+    grid-area: iframe;
 }
 
 /* .contact-button,
