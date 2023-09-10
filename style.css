@@ -164,6 +164,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
+    transition: top 1s;
 }
 
 nav .logo {
@@ -353,17 +354,20 @@ main p {
     gap: 2rem;
 }
 
+form {
+    grid-area: contact;
+    align-self: center;
+}
+
 .contact-form {
     display: grid;
     height: 30vh;
-    align-self: center;
-    grid-area: contact;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-auto-rows: 0.7fr 2fr 0.7fr;
     grid-template-areas:
         "name name email email"
         "text text text text"
-        "submit . . .";
+        "submit alert alert .";
     gap: 1rem;
     filter: drop-shadow(0 0 0.05rem rgba(0, 0, 0, 0.2));
 }
@@ -415,6 +419,32 @@ main p {
 .submit:hover {
     background-color: #02458b;
     transform: scale(1.02);
+}
+
+.alert {
+    grid-area: alert;
+    background-color: #74c69d;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    display: none;
+}
+
+.alertOn {
+    display: block;
+}
+
+.closebtn {
+    color: #f8f9fa;
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: #212529;
 }
 
 .contact-map {

@@ -1,6 +1,6 @@
 const navbar = document.querySelector('.navBar');
 window.addEventListener('scroll', function () {
-   if (document.documentElement.scrollTop > 300) {
+   if (document.documentElement.scrollTop > 200) {
       navbar.classList.add('sticky');
    } else {
       navbar.classList.remove('sticky');
@@ -52,6 +52,12 @@ links.forEach(link => {
 });
 
 
+const inputs = document.querySelectorAll('input');
+const textarea = document.querySelector('textarea');
+const form = document.querySelector('form');
+const alertbox = document.querySelector('.alert');
+const closebtn = document.querySelector('.closebtn');
+
 function sendMail() {
    let params = {
       from_name: document.querySelector('.person-name').value,
@@ -59,18 +65,36 @@ function sendMail() {
       message: document.querySelector('.person-text').value
    }
    emailjs.send('service_9ecsisg', 'template_c4nafhh', params).then(function (res) {
-      alert('Message sent');
+      // alert('Message sent');
+      alertbox.classList.add('alertOn');
+
    })
 }
 
-const inputs = document.querySelectorAll('input');
-const textarea = document.querySelector('textarea');
-const buttonSubmit = document.querySelector('.submit');
 
-buttonSubmit.addEventListener('click', function (e) {
-   e.preventDefault();
-   sendMail();
-   inputs.forEach(input => input.value = '');
-   textarea.value = '';
-}
-);
+
+// buttonSubmit.addEventListener('click', function (e) {
+//    if (!form.checkValidity()) {
+//       e.preventDefault();
+//       e.stopPropagation();
+//    } else {
+//       sendMail();
+//       inputs.forEach(input => input.value = '');
+//       textarea.value = '';
+//    }
+// }
+// );
+
+form.addEventListener('click', function (e) {
+   if (form.checkValidity()) {
+      e.preventDefault();
+      sendMail();
+      inputs.forEach(input => input.value = '');
+      textarea.value = '';
+   }
+})
+
+closebtn.addEventListener('click', function () {
+   this.parentElement.classList.remove('alertOn');
+})
+
