@@ -242,7 +242,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #343a40;
 }
 
@@ -252,8 +252,7 @@ h3,
 }
 
 .aboutSec h2,
-.workSec h2,
-.contactSec h2 {
+.workSec h2 {
     margin-bottom: 2rem;
 }
 
@@ -352,6 +351,11 @@ main p {
     grid-template-areas:
         "contact map";
     gap: 2rem;
+}
+
+.contact-grid h2 {
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
 form {
