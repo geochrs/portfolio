@@ -276,16 +276,36 @@ main p {
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
-    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: 0.5fr;
     grid-template-areas:
-        ". about"
+        "image about"
         "cards cards";
     margin: 0 5rem;
     gap: 2rem;
 }
 
+.aboutImage {
+    grid-area: image;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
+}
+
 .aboutme {
     grid-area: about;
+    align-self: center;
+}
+
+.personal-info {
+    margin-top: 2rem;
+}
+
+.personal-info>* {
+    margin-bottom: 1rem;
+}
+
+.personal-info h3 {
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .carousel {
@@ -356,6 +376,18 @@ main p {
 .contact-grid h2 {
     text-align: left;
     margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.contact-grid h2:before {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 0;
+    bottom: 0;
+    right: 77%;
+    border-bottom: 4px solid #0056b3;
 }
 
 form {
@@ -461,7 +493,9 @@ form {
 
 iframe {
     height: 42vh;
+    border-radius: 5px;
     grid-area: iframe;
+    filter: drop-shadow(0 0 0.05rem rgba(0, 0, 0, 0.2));
 }
 
 /* .contact-button,
