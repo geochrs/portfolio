@@ -204,31 +204,38 @@ main {
 }
 
 .headers {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-template-areas:
+        "name image";
 }
 
-.header-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.header-info {
+    grid-area: name;
+    align-self: center;
     line-height: 1.2;
+    margin: 0 auto;
+}
+
+.header-image {
+    grid-area: image;
+    margin: 0 auto;
 }
 
 .image {
-    filter: drop-shadow(0 0 0.04rem rgba(0, 0, 0, 0.4));
-    width: fit-content;
+    /* filter: drop-shadow(0 0 0.05rem rgba(52, 58, 64, 0.4)); */
+    height: 50vh;
 }
 
-.header-child h1 {
+.header-info h1 {
     font-size: 30px;
 }
 
-.header-child h2 {
+.header-info h2 {
     font-size: 60px;
 }
 
-.header-child h3 {
+.header-info h3 {
     font-size: 35px;
 }
 
@@ -269,14 +276,30 @@ main p {
     scroll-margin: 120px;
 }
 
-.contactSec,
 .footer {
     text-align: center;
 }
 
+.social-container {
+    /* width: 20%; */
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    /* justify-content: center; */
+}
+
+.social-card {
+    transition: transform 0.5s;
+}
+
+.social-card:hover {
+    cursor: pointer;
+    transform: translate(0, -10%);
+}
+
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-auto-rows: 0.5fr;
     grid-template-areas:
         "image about"
@@ -288,7 +311,7 @@ main p {
 .aboutImage {
     grid-area: image;
     margin: 0 auto;
-    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.4));
+    filter: drop-shadow(0 0 0.2rem rgba(52, 58, 64, 0.4));
 }
 
 .aboutme {
