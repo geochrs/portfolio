@@ -152,11 +152,44 @@ body {
     text-shadow: 0 0.02rem 0.01rem rgba(0, 0, 0, 0.4);
 }
 
+/* NAV STARTS HERE */
+
 nav {
     background-color: #f8f9fa;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+}
+
+.logo {
+    width: 50%;
+    margin: 0 auto;
+    /* padding-left: 28%; */
+    /* display: flex; */
+}
+
+.nav-container {
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-container li:hover {
+    transform: scale(1.07);
+    transition: transform 0.2s;
+}
+
+.nav-links {
+    text-decoration: none;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    color: #212529;
+    transition: color 0.2s;
+}
+
+.nav-links:hover {
+    color: #0056b3;
+    cursor: pointer;
 }
 
 .sticky {
@@ -167,37 +200,11 @@ nav {
     transition: top 1s;
 }
 
-nav .logo {
-    margin-left: 5%;
-}
-
-nav ul {
-    display: flex;
-    gap: 3em;
-    margin-right: 15%;
-}
-
-nav ul li:hover {
-    transform: scale(1.07);
-    transition: transform 0.2s;
-}
-
-.nav-links {
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #212529;
-    transition: color 0.2s;
-}
-
-.nav-links:hover {
-    color: #0056b3;
-    cursor: pointer;
-}
-
 .selected {
     color: #0056b3;
 }
+
+/* HEADER STARTS HERE */
 
 main {
     margin: 0 3rem;
@@ -223,8 +230,9 @@ main {
 }
 
 .image {
-    /* filter: drop-shadow(0 0 0.05rem rgba(52, 58, 64, 0.4)); */
-    height: 50vh;
+    filter: drop-shadow(0 0 0.05rem rgba(52, 58, 64, 0.4));
+    max-width: 100%;
+    height: 100%;
 }
 
 .header-info h1 {
@@ -260,7 +268,7 @@ h3,
 }
 
 .aboutSec h2,
-.workSec h2 {
+.projectsSec h2 {
     margin-bottom: 2rem;
 }
 
@@ -271,7 +279,7 @@ main p {
 }
 
 .aboutSec,
-.workSec,
+.projectsSec,
 .contactSec {
     scroll-margin: 120px;
 }
@@ -297,7 +305,9 @@ main p {
     transform: translate(0, -10%);
 }
 
-.about-grid {
+/* ABOUT STARTS HERE */
+
+.aboutSec {
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-auto-rows: 0.5fr;
@@ -308,13 +318,18 @@ main p {
     gap: 2rem;
 }
 
-.aboutImage {
+.about-image {
     grid-area: image;
     margin: 0 auto;
     filter: drop-shadow(0 0 0.2rem rgba(52, 58, 64, 0.4));
 }
 
-.aboutme {
+.image2 {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.about-me {
     grid-area: about;
     align-self: center;
 }
@@ -336,13 +351,13 @@ main p {
     grid-area: cards;
 }
 
-.card-container {
+.skill-container {
     display: flex;
     justify-content: center;
     gap: 8px;
 }
 
-.card-container::-webkit-scrollbar {
+.skill-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -363,13 +378,24 @@ main p {
     border-radius: 10%;
 }
 
-.workSec {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+/* PROJECTS STARTS HERE */
+
+.projectsSec {
+    display: grid;
+    /* grid-template-columns: repeat(2, minmax(400px, 1fr)); */
+    /* justify-content: center; */
 }
 
-.cards {
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* .cards {
     width: 60%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -384,7 +410,9 @@ main p {
 
 .card>img {
     max-width: 100%;
-}
+} */
+
+/* CONTACT STARTS HERE */
 
 .contact-grid {
     display: grid;
@@ -550,7 +578,7 @@ iframe {
 .headers,
 .aboutSec,
 .about-title p,
-.workSec,
+.projectsSec,
 .contactSec {
     margin-bottom: 5rem;
 }
