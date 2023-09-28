@@ -135,6 +135,7 @@ table {
 }
 
 /* Code starts here  */
+/*  */
 
 *:focus {
     outline: none;
@@ -176,6 +177,18 @@ h3,
 .projectsSec,
 .contactSec {
     scroll-margin: 120px;
+}
+
+.about-me h2:after,
+.projectsSec h2:after,
+form h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #0056b3;
+    bottom: 0;
+    left: 25%;
 }
 
 /* MAIN STARTS HERE */
@@ -349,6 +362,9 @@ nav {
 
 .about-me h2 {
     margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 .personal-info {
@@ -396,13 +412,15 @@ nav {
 
 .projectsSec {
     grid-area: projects;
-    display: grid;
     width: 80%;
     margin: 0 auto;
 }
 
 .projectsSec h2 {
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 .project-container {
@@ -497,16 +515,7 @@ form h2 {
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.5rem;
-}
-
-form h2:before {
-    content: "";
-    position: absolute;
-    width: 15%;
-    height: 0;
-    bottom: 0;
-    right: 77%;
-    border-bottom: 4px solid #0056b3;
+    display: inline-block;
 }
 
 form {
@@ -760,12 +769,8 @@ iframe {
         text-align: center;
     }
 
-    form h2::before {
-        right: 44%;
-    }
-
     .contact-form {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .contact-map {
@@ -899,12 +904,8 @@ iframe {
         text-align: center;
     }
 
-    form h2::before {
-        right: 44%;
-    }
-
     .contact-form {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .contact-map {
