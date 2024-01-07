@@ -161,6 +161,7 @@ h3 {
 
 h1 {
     color: #0056b3;
+    font-weight: 400;
 }
 
 h2 {
@@ -279,28 +280,36 @@ nav {
 
 .headers {
     grid-area: headers;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-areas:
         "name image";
+    gap: 2rem;
 }
 
 .header-info {
     grid-area: name;
     align-self: center;
     line-height: 1.2;
+    margin: 0 auto;
+}
+
+.name {
+    color: #0056b3;
 }
 
 .header-image {
     grid-area: image;
     align-self: center;
+    margin: 0 auto;
 }
 
 .image {
-    filter: drop-shadow(0 0 0.05rem rgba(52, 58, 64, 0.4));
-    width: 100%;
+    filter: drop-shadow(0 0 0.15rem rgba(52, 58, 64, 0.8));
+    animation: shaping 5s infinite;
+    max-width: 100%;
 }
 
 .header-info h1 {
@@ -308,7 +317,7 @@ nav {
 }
 
 .header-info h2 {
-    font-size: 4rem;
+    font-size: 3.2rem;
 }
 
 .header-info h3 {
@@ -334,10 +343,10 @@ nav {
 
 .aboutSec {
     grid-area: about;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-areas:
         "image about"
         "cards cards";
@@ -412,7 +421,7 @@ nav {
 
 .projectsSec {
     grid-area: projects;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -647,10 +656,6 @@ iframe {
         grid-template-areas:
             "name"
             "image";
-    }
-
-    .header-image {
-        margin: 0 auto;
     }
 
     .aboutSec {
@@ -910,5 +915,17 @@ iframe {
 
     .contact-map {
         display: none;
+    }
+}
+
+@keyframes shaping {
+
+    0%,
+    100% {
+        border-radius: 40% 60% 65% 35% / 40% 35% 65% 60%;
+    }
+
+    50% {
+        border-radius: 70% 30% 50% 50% / 65% 35% 65% 35%;
     }
 }
