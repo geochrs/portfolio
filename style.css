@@ -194,8 +194,6 @@ form h2:after {
 
 .sectionColor {
     background: #f8f9fa;
-    display: flex;
-    align-items: center;
 }
 
 /* MAIN STARTS HERE */
@@ -217,7 +215,7 @@ main p {
         "about"
         "projects"
         "contact";
-    gap: 8rem;
+    gap: 6rem;
 }
 
 /* NAV STARTS HERE */
@@ -288,7 +286,7 @@ nav {
 .headers {
     grid-area: headers;
     width: 70%;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-areas:
@@ -301,6 +299,10 @@ nav {
     align-self: center;
     line-height: 1.2;
     margin: 0 auto;
+}
+
+.header-info>* {
+    padding: 0.4rem 0;
 }
 
 .name {
@@ -349,15 +351,21 @@ nav {
 /* ABOUT STARTS HERE */
 
 .aboutSec {
-    grid-area: about;
+    /* grid-area: about; */
     width: 70%;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-areas:
         "image about"
         "cards cards";
     gap: 2rem;
+}
+
+.about-area {
+    grid-area: about;
+    align-items: center;
+    display: grid;
 }
 
 .about-image {
@@ -429,11 +437,11 @@ nav {
 .projectsSec {
     grid-area: projects;
     width: 70%;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 .projectsSec h2 {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     position: relative;
     padding-bottom: 0.5rem;
     display: inline-block;
@@ -516,15 +524,21 @@ nav {
 /* CONTACT STARTS HERE */
 
 .contactSec {
-    grid-area: contact;
+    /* grid-area: contact; */
     display: grid;
     width: 70%;
-    margin: 0 auto;
+    margin: 2rem auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "contact map";
     gap: 2rem;
     align-items: center;
+}
+
+.contact-area {
+    grid-area: contact;
+    align-items: center;
+    display: grid;
 }
 
 form h2 {
