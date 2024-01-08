@@ -146,7 +146,7 @@ html {
 }
 
 body {
-    background: #e9ecef;
+    background: #f4f6f8;
     box-sizing: border-box;
     font-size: 14px;
     font-family: 'Rubik', sans-serif;
@@ -192,6 +192,12 @@ form h2:after {
     left: 25%;
 }
 
+.sectionColor {
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+}
+
 /* MAIN STARTS HERE */
 
 main p {
@@ -228,6 +234,7 @@ nav {
     width: 100%;
     transition: transform 0.5s ease;
     z-index: 1;
+    box-shadow: 0 0 0.12rem rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -445,10 +452,10 @@ nav {
     gap: 1rem;
     grid-template-areas:
         "info image";
-    background-color: #e7ebef;
+    background-color: #f8f9fa;
     border-radius: 16px;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
-    padding: 8px;
+    padding: 1.5rem;
 }
 
 .project-info {
@@ -468,7 +475,7 @@ nav {
 
 .project-image img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
 .project-links {
@@ -479,25 +486,26 @@ nav {
 
 .see-live {
     text-decoration: none;
-    border: 2px solid #0056b3;
     color: #0056b3;
-    padding: 0.6rem 1rem;
-    border-radius: 5%;
-    font-size: 1rem;
-    transition: transform 0.2s, color 0.2s;
-    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 .see-live:hover {
-    transform: translate(0, -10%);
     color: #02458b;
 }
 
 .source-code {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #0056b3;
-    transition: color 0.2s;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
 }
 
 .source-code:hover {
@@ -553,7 +561,7 @@ form {
 .person-email,
 .person-text {
     border: 1px solid #a9b3bd;
-    background-color: #e9ecef;
+    background-color: #f4f6f8;
     border-radius: 5px;
     font-size: 1rem;
 }
