@@ -83,3 +83,10 @@ form.addEventListener('click', function (e) {
 closebtn.addEventListener('click', function () {
    this.parentElement.classList.remove('alertOn');
 })
+
+//typing effect
+let typingEffect = new TypeIt(".typedText", {
+   strings: "Front End Developer.",
+   speed: 120,
+   waitUntilVisible: true,
+}).go();
