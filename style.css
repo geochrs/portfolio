@@ -457,7 +457,7 @@ nav {
 .project-card {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-    gap: 1rem;
+    gap: 3rem;
     grid-template-areas:
         "info image";
     background-color: #f8f9fa;
@@ -467,10 +467,9 @@ nav {
 }
 
 .project-info {
-    grid-area: info;
-    display: grid;
-    grid-template-rows: 0.15fr 0.3fr 0.15fr;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .project-info h3 {
@@ -479,6 +478,7 @@ nav {
 
 .project-image {
     grid-area: image;
+    align-self: center;
 }
 
 .project-image img {
