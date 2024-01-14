@@ -137,6 +137,12 @@ table {
 /* Code starts here  */
 /*  */
 
+:root {
+    --primaryColor: #343a40;
+    --secondaryColor: #6d757d;
+    --tertiaryColor: #0056b3;
+}
+
 *:focus {
     outline: none;
 }
@@ -159,19 +165,14 @@ h3 {
     font-weight: 500;
 }
 
-h1 {
-    color: #0056b3;
-    font-weight: 400;
-}
-
 h2 {
     font-size: 2rem;
-    color: #343a40;
+    color: var(--primaryColor);
 }
 
 h3,
 .footer {
-    color: #495057;
+    color: var(--primaryColor);
 }
 
 .aboutSec,
@@ -187,7 +188,7 @@ form h2:after {
     position: absolute;
     width: 50%;
     height: 2px;
-    background: #0056b3;
+    background: var(--tertiaryColor);
     bottom: 0;
     left: 25%;
 }
@@ -199,7 +200,7 @@ form h2:after {
 /* MAIN STARTS HERE */
 
 main p {
-    color: #495057;
+    color: var(--secondaryColor);
     font-size: 1.2rem;
     line-height: 1.5;
 }
@@ -254,17 +255,17 @@ nav {
 .nav-links {
     text-decoration: none;
     font-weight: 500;
-    color: #212529;
+    color: var(--primaryColor);
     transition: color 0.2s;
 }
 
 .nav-links:hover {
-    color: #0056b3;
+    color: var(--tertiaryColor);
     cursor: pointer;
 }
 
 .selected {
-    color: #0056b3;
+    color: var(--tertiaryColor);
 }
 
 .hamburger {
@@ -278,7 +279,7 @@ nav {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #101010;
+    background-color: var(--primaryColor);
 }
 
 /* HEADER STARTS HERE */
@@ -306,7 +307,7 @@ nav {
 }
 
 .name {
-    color: #0056b3;
+    color: var(--tertiaryColor);
 }
 
 .header-image {
@@ -322,15 +323,8 @@ nav {
 }
 
 .header-info h1 {
-    font-size: 2rem;
-}
-
-.header-info h2 {
     font-size: 3.2rem;
-}
-
-.header-info h3 {
-    font-size: 2.2rem;
+    color: var(--primaryColor);
 }
 
 .social-container {
@@ -494,7 +488,7 @@ nav {
 
 .see-live {
     text-decoration: none;
-    color: #0056b3;
+    color: var(--tertiaryColor);
     font-size: 1.1rem;
     transition: color 0.3s;
     display: flex;
@@ -503,13 +497,13 @@ nav {
 }
 
 .see-live:hover {
-    color: #02458b;
+    color: var(--tertiaryColor);
 }
 
 .source-code {
     text-decoration: none;
     font-size: 1.1rem;
-    color: #0056b3;
+    color: var(--tertiaryColor);
     transition: color 0.3s;
     display: flex;
     align-items: center;
@@ -517,7 +511,7 @@ nav {
 }
 
 .source-code:hover {
-    color: #02458b;
+    color: var(--tertiaryColor);
 
 }
 
@@ -583,7 +577,7 @@ form {
 .person-name:focus,
 .person-email:focus,
 .person-text:focus {
-    border: 1px solid #0056b3;
+    border: 1px solid var(--tertiaryColor);
 }
 
 .person-name {
@@ -601,7 +595,7 @@ form {
 
 .submit {
     grid-area: submit;
-    background-color: #0056b3;
+    background-color: var(--tertiaryColor);
     border: none;
     border-radius: 5px;
     color: #f8f9fa;
