@@ -629,8 +629,8 @@ form {
 }
 
 .msgColor {
-    color: #343a40 ;
-    margin-left: 1rem;
+  color: #343a40;
+  margin-left: 1rem;
 }
 
 .closebtn {
@@ -803,6 +803,10 @@ iframe {
   .contact-map {
     display: none;
   }
+
+  .submit {
+    font-size: 1rem;
+  }
 }
 
 @media (width <=490px) {
@@ -934,6 +938,10 @@ iframe {
 
   .contact-map {
     display: none;
+  }
+
+  .submit {
+    font-size: 1rem;
   }
 }
 
