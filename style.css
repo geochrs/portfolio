@@ -672,8 +672,8 @@ iframe {
   .headers {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "name"
-      "image";
+      "image"
+      "name";
   }
 
   .aboutSec {
@@ -747,11 +747,13 @@ iframe {
 
   .headers {
     grid-template-columns: 1fr;
-    grid-template-areas: "name";
+    grid-template-areas:
+      "image"
+      "name";
   }
 
   .header-image {
-    display: none;
+    max-width: 80%;
   }
 
   .aboutSec {
