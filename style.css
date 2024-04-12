@@ -603,8 +603,9 @@ form {
   border-radius: 5px;
   color: #f8f9fa;
   transition: transform 0.2s, background-color 0.2s;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: inherit;
+  width: 70%;
 }
 
 .submit:hover {
@@ -615,8 +616,8 @@ form {
 .alert {
   grid-area: alert;
   background-color: #74c69d;
-  padding: 1rem 0;
-  font-size: 1rem;
+  padding: 1.3rem 0;
+  font-size: 1.2rem;
   font-weight: 500;
   border-radius: 5px;
   display: none;
@@ -631,6 +632,7 @@ form {
   color: #f8f9fa;
   float: right;
   margin-right: 1rem;
+  margin-top: 0.2rem;
   cursor: pointer;
   transition: 0.3s;
 }
