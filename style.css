@@ -686,8 +686,8 @@ iframe {
   .aboutSec {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "about"
       "image"
+      "about"
       "cards";
   }
 
@@ -835,8 +835,6 @@ iframe {
   .hamburger {
     display: block;
     cursor: pointer;
-    justify-self: flex-end;
-    margin-right: 1rem;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -853,45 +851,44 @@ iframe {
 
   .main-container {
     width: 100%;
-    padding-top: 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
     gap: 2.5rem;
   }
 
-  .logo {
-    margin: 0;
-  }
-
   .headers {
+    text-align: center;
     grid-template-columns: 1fr;
-    grid-template-areas: "name";
-    width: 90%;
+    grid-template-areas:
+      "image"
+      "name";
+    width: 85%;
   }
 
   .header-info h1 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
 
   .header-info h2 {
     font-size: 3rem;
   }
 
-  .header-info h3 {
-    font-size: 1.8rem;
+  .header-image {
+    width: 75%;
   }
 
-  .header-image {
-    display: none;
+  .social-container {
+    justify-content: center;
   }
 
   .aboutSec {
+    text-align: center;
     grid-template-columns: 1fr;
     grid-template-areas:
       "image"
       "about"
       "cards";
-    width: 90%;
+    width: 85%;
   }
 
   .skill-container {
@@ -904,11 +901,8 @@ iframe {
   }
 
   .projectsSec {
-    width: 90%;
-  }
-
-  .projectsSec h2 {
     text-align: center;
+    width: 85%;
   }
 
   .project-container {
@@ -922,14 +916,15 @@ iframe {
       "info";
   }
 
-  .contactSec {
-    grid-template-columns: 1fr;
-    grid-template-areas: "contact";
-    width: 90%;
+  .project-links {
+    justify-content: center;
   }
 
-  form h2 {
+  .contactSec {
     text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contact";
+    width: 85%;
   }
 
   .contact-form {
