@@ -757,6 +757,7 @@ iframe {
     grid-template-areas:
       "image"
       "name";
+      width: 85%;
   }
 
   .header-image {
@@ -769,10 +770,6 @@ iframe {
       "image"
       "about"
       "cards";
-  }
-
-  .projectsSec h2 {
-    text-align: center;
   }
 
   .project-card {
@@ -790,10 +787,6 @@ iframe {
   .contactSec {
     grid-template-columns: 1fr;
     grid-template-areas: "contact";
-  }
-
-  form h2 {
-    text-align: center;
   }
 
   .contact-form {
