@@ -197,12 +197,12 @@ form h2:after {
   background: #f8f9fa;
 }
 
-.headers,
+/* .headers,
 .aboutSec,
 .projectsSec,
 .contactSec {
   max-width: 1920px;
-}
+} */
 
 /* MAIN STARTS HERE */
 
@@ -262,6 +262,7 @@ nav {
 .nav-links {
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
   color: var(--primaryColor);
   transition: color 0.2s;
 }
@@ -293,12 +294,13 @@ nav {
 
 .headers {
   grid-area: headers;
-  width: 70%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas: "name image";
   gap: 2rem;
+  max-width: 1700px;
+  padding: 0 2rem;
 }
 
 .header-info {
@@ -352,7 +354,6 @@ nav {
 
 .aboutSec {
   /* grid-area: about; */
-  width: 70%;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -360,6 +361,12 @@ nav {
     "image about"
     "cards cards";
   gap: 2rem;
+  max-width: 1700px;
+  padding: 0 2rem;
+}
+
+.about-me {
+  padding: 0 2rem;
 }
 
 .about-area {
@@ -436,15 +443,14 @@ nav {
 
 .projectsSec {
   grid-area: projects;
-  width: 70%;
   margin: 2rem auto;
 }
 
 .projectsSec h2 {
   margin-bottom: 2rem;
   position: relative;
-  padding-bottom: 0.5rem;
   display: inline-block;
+  padding: 0 0 0.5rem 2rem;
 }
 
 .project-container {
@@ -452,6 +458,8 @@ nav {
   margin-top: 2rem;
   grid-template-columns: repeat(1, minmax(300px, 1fr));
   gap: 2rem;
+  max-width: 1700px;
+  padding: 0 2rem;
 }
 
 .project-card {
@@ -524,12 +532,13 @@ nav {
 .contactSec {
   /* grid-area: contact; */
   display: grid;
-  width: 70%;
   margin: 2rem auto;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "contact map";
   gap: 2rem;
   align-items: center;
+  max-width: 1700px;
+  padding: 0 2rem;
 }
 
 .contact-area {
@@ -540,7 +549,7 @@ nav {
 
 form h2 {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   position: relative;
   padding-bottom: 0.5rem;
   display: inline-block;
@@ -917,7 +926,11 @@ iframe {
   }
 
   .contact-form {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "name email"
+      "text text"
+      "submit alert";
   }
 
   .contact-map {
@@ -929,7 +942,7 @@ iframe {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .header-info h1 {
     font-size: 2.5rem;
   }
