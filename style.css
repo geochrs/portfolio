@@ -216,14 +216,14 @@ main p {
   /* max-width: 1920px; */
   /* margin: 0 auto; */
   display: grid;
-  grid-template-rows: repeat(4, 0.5fr);
+  /* grid-template-rows: repeat(4, 0.5fr); */
   /* grid-template-rows: repeat(auto-fill, minmax(550px, 1fr)); */
   grid-template-areas:
     "headers"
     "about"
     "projects"
     "contact";
-  gap: 6rem;
+  gap: 12rem;
 }
 
 /* NAV STARTS HERE */
@@ -294,13 +294,13 @@ nav {
 
 .headers {
   grid-area: headers;
-  margin: 2rem auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas: "name image";
   gap: 2rem;
   max-width: 1700px;
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .header-info {
@@ -353,7 +353,7 @@ nav {
 /* ABOUT STARTS HERE */
 
 .aboutSec {
-  /* grid-area: about; */
+  grid-area: about;
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -362,7 +362,7 @@ nav {
     "cards cards";
   gap: 2rem;
   max-width: 1700px;
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .about-me {
@@ -370,7 +370,7 @@ nav {
 }
 
 .about-area {
-  grid-area: about;
+  /* grid-area: about; */
   align-items: center;
   display: grid;
 }
@@ -444,6 +444,7 @@ nav {
 .projectsSec {
   grid-area: projects;
   margin: 2rem auto;
+  padding: 0 10rem;
 }
 
 .projectsSec h2 {
@@ -538,7 +539,7 @@ nav {
   gap: 2rem;
   align-items: center;
   max-width: 1700px;
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .contact-area {
@@ -864,6 +865,7 @@ iframe {
     grid-template-areas:
       "image"
       "name";
+    padding: 0 4rem;
   }
 
   .header-info h1 {
@@ -889,6 +891,7 @@ iframe {
       "image"
       "about"
       "cards";
+    padding: 0 4rem;
   }
 
   .skill-container {
@@ -902,6 +905,8 @@ iframe {
 
   .projectsSec {
     text-align: center;
+    padding: 0 4rem;
+
   }
 
   .project-container {
@@ -923,10 +928,11 @@ iframe {
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-areas: "contact";
+    padding: 0 4rem;
   }
 
   .contact-form {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas:
       "name email"
       "text text"
