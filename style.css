@@ -322,6 +322,7 @@ nav {
   grid-area: image;
   align-self: center;
   margin: 0 auto;
+  max-width: 70%;
 }
 
 .image {
@@ -933,11 +934,11 @@ iframe {
 
 @media (max-width: 576px) {
   .header-info h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .header-image {
-    max-width: 75%;
+    max-width: 60%;
   }
 
   .headers,

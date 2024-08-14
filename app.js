@@ -86,7 +86,7 @@ closebtn.addEventListener('click', function () {
 
 //typing effect
 let typingEffect = new TypeIt(".typedText", {
-   strings: "Front End Developer.",
+   strings: "George Christopoulos.",
    speed: 120,
    waitUntilVisible: true,
 }).go();
