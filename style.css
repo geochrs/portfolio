@@ -125,7 +125,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -155,7 +155,7 @@ body {
   background: #f4f6f8;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   text-shadow: 0 0.02rem 0.01rem rgba(0, 0, 0, 0.4);
 }
 
@@ -184,7 +184,7 @@ h3,
 .about-me h2:after,
 .projectsSec h2:after,
 form h2:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 50%;
   height: 2px;
@@ -219,11 +219,11 @@ main p {
   /* grid-template-rows: repeat(4, 0.5fr); */
   /* grid-template-rows: repeat(auto-fill, minmax(550px, 1fr)); */
   grid-template-areas:
-    "headers"
-    "about"
-    "projects"
-    "contact";
-  gap: 12rem;
+    'headers'
+    'about'
+    'projects'
+    'contact';
+  gap: 6rem;
 }
 
 /* NAV STARTS HERE */
@@ -297,7 +297,7 @@ nav {
   margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  grid-template-areas: "name image";
+  grid-template-areas: 'name image';
   gap: 2rem;
   max-width: 1700px;
   padding: 0 10rem;
@@ -358,8 +358,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas:
-    "image about"
-    "cards cards";
+    'image about'
+    'cards cards';
   gap: 2rem;
   max-width: 1700px;
   padding: 0 10rem;
@@ -467,7 +467,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 3rem;
-  grid-template-areas: "info image";
+  grid-template-areas: 'info image';
   background-color: #f8f9fa;
   border-radius: 16px;
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
@@ -535,7 +535,7 @@ nav {
   display: grid;
   margin: 2rem auto;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "contact map";
+  grid-template-areas: 'contact map';
   gap: 2rem;
   align-items: center;
   max-width: 1700px;
@@ -566,9 +566,9 @@ form {
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   grid-auto-rows: 0.7fr 2fr 0.7fr;
   grid-template-areas:
-    "name name email email"
-    "text text text text"
-    "submit alert alert .";
+    'name name email email'
+    'text text text text'
+    'submit alert alert .';
   gap: 1rem;
   filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.2));
 }
@@ -659,7 +659,7 @@ form {
 .contact-map {
   grid-area: map;
   display: grid;
-  grid-template-areas: "iframe";
+  grid-template-areas: 'iframe';
   margin: 0 auto;
   grid-template-columns: minmax(250px, 1fr);
 }
@@ -863,9 +863,8 @@ iframe {
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "image"
-      "name";
-    padding: 0 4rem;
+      'image'
+      'name';
   }
 
   .header-info h1 {
@@ -888,10 +887,9 @@ iframe {
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "image"
-      "about"
-      "cards";
-    padding: 0 4rem;
+      'image'
+      'about'
+      'cards';
   }
 
   .skill-container {
@@ -916,8 +914,8 @@ iframe {
   .project-card {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "image"
-      "info";
+      'image'
+      'info';
   }
 
   .project-links {
@@ -927,8 +925,7 @@ iframe {
   .contactSec {
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-areas: "contact";
-    padding: 0 4rem;
+    grid-template-areas: 'contact';
   }
 
   .contact-form {
