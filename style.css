@@ -918,11 +918,7 @@ iframe {
   }
 
   .contact-form {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-    "name email"
-    "text text"
-    "submit alert";
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .contact-map {
