@@ -201,7 +201,8 @@ form h2:after {
 .aboutSec,
 .projectsSec,
 .contactSec {
-  max-width: 1920px;
+  max-width: 1024px;
+  padding: 0 1.2rem;
 }
 
 /* MAIN STARTS HERE */
@@ -294,7 +295,7 @@ nav {
 
 .headers {
   grid-area: headers;
-  width: 70%;
+  /* width: 70%; */
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -353,7 +354,7 @@ nav {
 
 .aboutSec {
   /* grid-area: about; */
-  width: 70%;
+  /* width: 70%; */
   margin: 2rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
@@ -437,7 +438,7 @@ nav {
 
 .projectsSec {
   grid-area: projects;
-  width: 70%;
+  /* width: 70%; */
   margin: 2rem auto;
 }
 
@@ -525,7 +526,7 @@ nav {
 .contactSec {
   /* grid-area: contact; */
   display: grid;
-  width: 70%;
+  /* width: 70%; */
   margin: 2rem auto;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'contact map';
@@ -606,7 +607,7 @@ form {
   transition: transform 0.2s, background-color 0.2s;
   font-size: 1.2rem;
   font-family: inherit;
-  width: 70%;
+  /* width: 70%; */
 }
 
 .submit:hover {
@@ -930,13 +931,20 @@ iframe {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 576px) {
   .header-info h1 {
     font-size: 2.5rem;
   }
 
   .header-image {
-    max-width: 85%;
+    max-width: 75%;
+  }
+
+  .headers,
+  .aboutSec,
+  .projectsSec,
+  .contactSec {
+    padding: 0 0.5rem;
   }
 }
 
