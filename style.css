@@ -296,16 +296,17 @@ nav {
 .headers {
   grid-area: headers;
   /* width: 70%; */
-  margin: 2rem auto;
+  margin: 11.5rem auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas: 'name image';
   gap: 2rem;
+  height: 60vh;
 }
 
 .header-info {
   grid-area: name;
-  align-self: center;
+  /* align-self: center; */
   line-height: 1.2;
   margin: 0 auto;
 }
@@ -320,7 +321,7 @@ nav {
 
 .header-image {
   grid-area: image;
-  align-self: center;
+  /* align-self: center; */
   margin: 0 auto;
   max-width: 70%;
 }
@@ -755,7 +756,7 @@ iframe {
     gap: 6rem;
   }
 
-  .headers {
+  .  {
     grid-template-columns: 1fr;
     grid-template-areas:
       "image"
@@ -858,6 +859,7 @@ iframe {
     grid-template-areas:
       'image'
       'name';
+    margin: 5rem auto;
   }
 
   .header-info h1 {
