@@ -1,6 +1,6 @@
 # Personal-portfolio :round_pushpin:
 ## A clean, minimal portfolio ready for use!
-![Screenshot_1](https://github.com/geochrs/personal-portfolio/assets/125922884/f44bc076-4f0c-4509-9f5b-5e9e22183844)
+<img width="1212" alt="Screenshot_2" src="https://github.com/user-attachments/assets/df2b8c50-3005-4403-a64e-bcf3922d4cfe">
 ### Features :boom:
 :small_orange_diamond: One page layout. <br>
 :small_orange_diamond: Fully responsive. <br>
