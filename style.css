@@ -233,7 +233,6 @@ main p {
 
 nav {
   margin-bottom: 1rem;
-  background-color: #f8f9fa;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -241,9 +240,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  transition: transform 0.5s ease;
+  transition: all 0.5s ease;
   z-index: 1;
-  box-shadow: 0 0 0.12rem rgba(0, 0, 0, 0.4);
 }
 
 .logo {
