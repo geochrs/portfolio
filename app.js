@@ -67,16 +67,6 @@ function closeMenu() {
 hamburger.addEventListener('click', toggleMenu);
 navLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
-icon.addEventListener('click', function () {
-  if (icon.classList.contains('fa-bars')) {
-    icon.classList.remove('fa-bars');
-    icon.classList.add('fa-times');
-  } else {
-    icon.classList.remove('fa-times');
-    icon.classList.add('fa-bars');
-  }
-});
-
 //send email
 const inputs = document.querySelectorAll('input');
 const textarea = document.querySelector('textarea');
