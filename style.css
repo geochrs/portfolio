@@ -397,11 +397,11 @@ main p {
 /* CONTACT STARTS HERE */
 
 .contact-area {
-  /* grid-area: contact; */
+  grid-area: contact;
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
 }
 
 .contactSec {
@@ -470,7 +470,7 @@ form h2 {
   transition: transform 0.2s, background-color 0.2s;
   font-size: 1.2rem;
   font-family: inherit;
-  /* width: 70%; */
+  width: 70%;
 }
 
 .submit:hover {
@@ -618,16 +618,16 @@ form h2 {
     justify-content: center;
   }
 
+  .contact-area {
+    height: 40vh;
+  }
+
   .contactSec {
     text-align: center;
   }
 
   .contact-form {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  .contact-map {
-    display: none;
   }
 
   .submit {
@@ -649,6 +649,10 @@ form h2 {
   .projectsSec,
   .contactSec {
     padding: 0 0.5rem;
+  }
+
+  .submit {
+    width: 100%;
   }
 }
 
