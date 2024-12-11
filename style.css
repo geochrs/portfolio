@@ -11,7 +11,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-
 }
 
 html {
@@ -153,6 +152,10 @@ main p {
 
 .hamburger {
   display: none;
+}
+
+.hamburger i {
+  transition: transform 0.3s ease;
 }
 
 /* HEADER STARTS HERE */

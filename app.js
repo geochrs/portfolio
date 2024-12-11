@@ -44,20 +44,38 @@ function activeLink() {
 //hamburger menu when mobile
 const hamburger = document.querySelector('.hamburger');
 const navContainer = document.querySelector('.nav-container');
-const navLink = document.querySelectorAll('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links');
 
-function mobileMenu() {
+function toggleMenu() {
   hamburger.classList.toggle('active');
   navContainer.classList.toggle('active');
+  const icon = hamburger.querySelector('i');
+
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
 }
 
+// Close the menu when a nav link is clicked
 function closeMenu() {
   hamburger.classList.remove('active');
   navContainer.classList.remove('active');
+  const icon = hamburger.querySelector('i');
+  icon.classList.remove('fa-times');
+  icon.classList.add('fa-bars');
 }
 
-hamburger.addEventListener('click', mobileMenu);
-navLink.forEach((n) => n.addEventListener('click', closeMenu));
+hamburger.addEventListener('click', toggleMenu);
+navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+
+icon.addEventListener('click', function () {
+  if (icon.classList.contains('fa-bars')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
+});
 
 //send email
 const inputs = document.querySelectorAll('input');
