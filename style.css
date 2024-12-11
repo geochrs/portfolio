@@ -435,24 +435,21 @@ form {
   filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.2));
 }
 
-.person-name,
-.person-email {
-  padding-left: 3%;
+#name,#email,#message {
+  border-bottom: 2px solid #6d757d;
 }
-
 .person-name,
 .person-email,
 .person-text {
-  border: 1px solid #a9b3bd;
-  background-color: #f4f6f8;
-  border-radius: 5px;
+  border: none;
+  background-color: transparent;
   font-size: 1rem;
 }
 
-.person-name:focus,
-.person-email:focus,
-.person-text:focus {
-  border: 1px solid var(--tertiaryColor);
+#name:focus,
+#email:focus,
+#message:focus {
+  border-bottom: 2px solid var(--tertiaryColor);
 }
 
 .person-name {
@@ -465,7 +462,8 @@ form {
 
 .person-text {
   grid-area: text;
-  padding-left: 1%;
+  padding: 60px 0 0;
+  
 }
 
 .submit {
