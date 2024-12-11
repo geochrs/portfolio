@@ -1,5 +1,5 @@
 //navbar scroll
-const navbar = document.querySelector('.navBar');
+const navbar = document.querySelector('.navBarHeader');
 let prevScrollPos = window.scrollY;
 
 window.addEventListener('scroll', function () {
