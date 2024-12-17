@@ -540,9 +540,9 @@ form h2 {
 @media (width <=900px) {
   .nav-container {
     position: fixed;
-    left: -110%;
+    /* left: -110%; */
     gap: 0rem;
-    top: 5rem;
+    top: -20rem;
     flex-direction: column;
     background-color: #f8f9fa;
     width: 100%;
@@ -554,10 +554,12 @@ form h2 {
 
   .nav-container.active {
     left: 0;
+    top: 5rem;
+    padding-right: 0;
   }
 
   .nav-item {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
   }
 
   .hamburger {
