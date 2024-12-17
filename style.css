@@ -156,10 +156,29 @@ main p {
 
 .hamburger {
   display: none;
+  gap: 7.5px;
+  cursor: pointer;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 
-.hamburger i {
-  transition: transform 0.3s ease;
+.hamburger div {
+  width: 37px;
+  height: 4px;
+  background-color: var(--primaryColor);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
 }
 
 /* HEADER STARTS HERE */
@@ -475,7 +494,7 @@ form h2 {
 
 .submit:hover {
   background-color: #02458b;
-  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .alert {
@@ -543,10 +562,7 @@ form h2 {
 
   .hamburger {
     display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
     padding-right: 5px;
-    font-size: 2rem;
   }
 
   .main-container {

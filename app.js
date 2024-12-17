@@ -49,19 +49,11 @@ const navLinks = document.querySelectorAll('.nav-links');
 function toggleMenu() {
   hamburger.classList.toggle('active');
   navContainer.classList.toggle('active');
-  const icon = hamburger.querySelector('i');
-
-  icon.classList.toggle('fa-bars');
-  icon.classList.toggle('fa-times');
 }
 
-// Close the menu when a nav link is clicked
 function closeMenu() {
   hamburger.classList.remove('active');
   navContainer.classList.remove('active');
-  const icon = hamburger.querySelector('i');
-  icon.classList.remove('fa-times');
-  icon.classList.add('fa-bars');
 }
 
 hamburger.addEventListener('click', toggleMenu);
