@@ -98,3 +98,12 @@ let typingEffect = new TypeIt('.typedText', {
   speed: 120,
   waitUntilVisible: true,
 }).go();
+
+
+const skillContainer = document.querySelector('.skill-container');
+const skills = document.querySelectorAll('.skill-card');
+
+skills.forEach(skill => {
+  const clone = skill.cloneNode(true);
+  skillContainer.appendChild(clone);
+});

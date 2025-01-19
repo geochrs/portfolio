@@ -298,11 +298,18 @@ main p {
   font-size: 1.2rem;
 }
 
-.skill-container {
+.carousel-wrapper {
   grid-area: cards;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.skill-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
+  animation: scroll-carousel 30s linear infinite;
 }
 
 .skill-container::-webkit-scrollbar {
@@ -310,20 +317,23 @@ main p {
 }
 
 .skill-card {
-  max-width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 0.25rem;
-  color: #4a544c;
-  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 150px;
+  text-align: center;
 }
 
 .skill-card img {
   filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.4));
   border-radius: 10%;
+}
+
+@keyframes scroll-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* PROJECTS STARTS HERE */
@@ -611,15 +621,6 @@ form h2 {
       'image'
       'about'
       'cards';
-  }
-
-  .skill-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-card {
-    height: 130px;
   }
 
   .projectsSec {
