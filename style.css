@@ -503,8 +503,7 @@ form h2 {
 .alert {
   grid-area: alert;
   background-color: #74c69d;
-  padding: 1.3rem 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 500;
   border-radius: 5px;
   display: none;
@@ -517,7 +516,10 @@ form h2 {
 
 .msgColor {
   color: #343a40;
-  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .closebtn {
