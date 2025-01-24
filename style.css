@@ -91,7 +91,7 @@ main p {
     'about'
     'projects'
     'contact';
-  gap: 6rem;
+  /* gap: 6rem; */
 }
 
 /* NAV STARTS HERE */
@@ -117,6 +117,7 @@ main p {
 .logo {
   display: flex;
   justify-content: flex-start;
+  height: 76px;
   /* width: 50%; */
   /* margin: 0 auto; */
 }
@@ -186,17 +187,34 @@ main p {
 .headers {
   grid-area: headers;
   /* width: 70%; */
-  margin: 11.5rem auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas: 'name image';
-  gap: 2rem;
-  height: 60vh;
+  /* gap: 2rem; */
+  height: 100vh;
+}
+
+.headers::after {
+  content: '';
+  background-image: url('/icons/hero2.webp');
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  /* pointer-events: none; */
+  filter: brightness(0.6);
+  height: 100vh;
+
 }
 
 .header-info {
   grid-area: name;
-  /* align-self: center; */
+  align-self: center;
   line-height: 1.2;
   margin: 0 auto;
 }
@@ -224,7 +242,24 @@ main p {
 
 .header-info h1 {
   font-size: 3.2rem;
-  color: var(--primaryColor);
+  color: #f4f6f8;
+}
+
+.start {
+  margin-top: 2.5rem;
+  background: var(--tertiaryColor);
+  color: #f4f6f8;
+  border: none;
+  font-size: 1.2rem;
+  padding: 15px 25px;
+  border-radius: 5px;
+  transition: background 0.5s;
+
+}
+
+.start:hover {
+  cursor: pointer;
+  background-color: #02458b;
 }
 
 .social-container {
@@ -266,7 +301,7 @@ main p {
   grid-area: image;
   margin: 0 auto;
   align-self: center;
-  filter: drop-shadow(0 0 0.2rem rgba(52, 58, 64, 0.4));
+  max-width: 70%;
 }
 
 .image2 {
