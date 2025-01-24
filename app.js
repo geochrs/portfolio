@@ -92,14 +92,6 @@ closebtn.addEventListener('click', function () {
   this.parentElement.classList.remove('alertOn');
 });
 
-//typing effect
-let typingEffect = new TypeIt('.typedText', {
-  strings: 'George Christopoulos.',
-  speed: 120,
-  waitUntilVisible: true,
-}).go();
-
-
 const skillContainer = document.querySelector('.skill-container');
 const skills = document.querySelectorAll('.skill-card');
 
