@@ -92,10 +92,5 @@ closebtn.addEventListener('click', function () {
   this.parentElement.classList.remove('alertOn');
 });
 
-const skillContainer = document.querySelector('.skill-container');
-const skills = document.querySelectorAll('.skill-card');
-
-skills.forEach(skill => {
-  const clone = skill.cloneNode(true);
-  skillContainer.appendChild(clone);
-});
+const copy = document.querySelector(".skill-slide").cloneNode(true);
+document.querySelector(".skill-container").appendChild(copy);

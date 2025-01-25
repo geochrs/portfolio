@@ -274,12 +274,6 @@ main p {
   gap: 2rem;
 }
 
-.about-area {
-  grid-area: about;
-  align-items: center;
-  display: grid;
-}
-
 .about-image {
   grid-area: image;
   margin: 0 auto;
@@ -316,14 +310,65 @@ main p {
   font-size: 1.2rem;
 }
 
-.carousel-wrapper {
+.skill-container {
   grid-area: cards;
   overflow: hidden;
-  width: 100%;
+  padding: 60px 0;
+  white-space: nowrap;
   position: relative;
 }
 
-.skill-container {
+.skill-container:before,
+.skill-container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.skill-container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #f8f9fa);
+}
+
+.skill-container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f9fa);
+}
+
+.skill-container:hover .skill-slide {
+  animation-play-state: paused;
+}
+
+.skill-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.skill-slide img {
+  margin: 0 40px;
+  margin-bottom: 10px;
+
+}
+
+.skill-item {
+  display: inline-block;
+  text-align: center;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* .skill-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -352,7 +397,7 @@ main p {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 /* PROJECTS STARTS HERE */
 
