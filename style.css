@@ -209,14 +209,13 @@ main p {
   /* pointer-events: none; */
   filter: brightness(0.6);
   height: 100vh;
-
 }
 
 .header-info {
   grid-area: name;
   align-self: center;
   line-height: 1.2;
-  margin: 0 auto;
+  margin: 0 auto 10rem;
 }
 
 .header-info > * {
@@ -622,7 +621,6 @@ form h2 {
     width: 100%;
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 2.5rem;
   }
 
   .headers {
@@ -630,12 +628,17 @@ form h2 {
     grid-template-columns: 1fr;
     grid-template-areas:
       'name'
-      '.';
+      '';
     height: 60vh;
   }
 
   .headers::after {
     height: 60vh;
+  }
+
+  .header-info {
+    margin-top: 8rem;
+    margin-bottom: 0;
   }
 
   .header-info h1 {
@@ -697,6 +700,11 @@ form h2 {
 }
 
 @media (max-width: 576px) {
+
+  .header-info {
+    margin-top: 0;
+  }
+
   .header-info h1 {
     font-size: 2.4rem;
   }
