@@ -118,6 +118,7 @@ main p {
   display: flex;
   justify-content: flex-start;
   height: 76px;
+  width: 125px;
   /* width: 50%; */
   /* margin: 0 auto; */
 }
