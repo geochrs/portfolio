@@ -617,6 +617,14 @@ form h2 {
   justify-content: center;
 }
 
+.social-row a svg path {
+  transition: fill 0.3s ease;
+}
+
+.social-row a:hover svg path {
+  fill: #343a40;
+}
+
 /* FOOTER STARTS HERE */
 
 .footer {
