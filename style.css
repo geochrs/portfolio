@@ -239,7 +239,6 @@ main p {
   padding: 15px 25px;
   border-radius: 5px;
   transition: background 0.5s;
-
 }
 
 .start:hover {
@@ -324,7 +323,7 @@ main p {
   top: 0;
   width: 250px;
   height: 100%;
-  content: "";
+  content: '';
   z-index: 2;
 }
 
@@ -350,7 +349,6 @@ main p {
 .skill-slide img {
   margin: 0 40px;
   margin-bottom: 10px;
-
 }
 
 .skill-item {
@@ -366,7 +364,6 @@ main p {
     transform: translateX(-100%);
   }
 }
-
 
 /* .skill-container {
   display: flex;
@@ -487,14 +484,12 @@ main p {
 
 /* CONTACT STARTS HERE */
 
-.contact-area {
+.contactSec {
   align-items: center;
   display: flex;
-  justify-content: center;
-}
-
-.contactSec {
-  flex: 1;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 10rem;
 }
 
 form h2 {
@@ -558,7 +553,6 @@ form h2 {
   transition: transform 0.2s, background-color 0.2s;
   font-size: 1.2rem;
   font-family: inherit;
-  width: 70%;
 }
 
 .submit:hover {
@@ -599,6 +593,28 @@ form h2 {
 
 .closebtn:hover {
   color: #212529;
+}
+
+.contact-info {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.contact-info p {
+  font-size: 1rem;
+}
+
+.contact-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social-row {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
 }
 
 /* FOOTER STARTS HERE */
@@ -693,12 +709,10 @@ form h2 {
     justify-content: center;
   }
 
-  .contact-area {
-    height: 40vh;
-  }
-
   .contactSec {
     text-align: center;
+    justify-content: center;
+    gap: 5rem;
   }
 
   .contact-form {
@@ -711,7 +725,6 @@ form h2 {
 }
 
 @media (max-width: 576px) {
-
   .header-info h1 {
     font-size: 2.4rem;
   }
@@ -723,15 +736,15 @@ form h2 {
   .headers {
     padding: 0 0.5rem;
   }
-  
+
   .aboutSec,
   .projectsSec,
   .contactSec {
-    padding:  2rem 0.5rem;
+    padding: 2rem 0.5rem;
   }
 
-  .submit {
-    width: 100%;
+  .contactSec {
+    gap: 3rem;
   }
 }
 
