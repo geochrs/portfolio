@@ -2,6 +2,7 @@
   --primaryColor: #343a40;
   --secondaryColor: #6d757d;
   --tertiaryColor: #0056b3;
+  --hoverColor: #02458b;
   --whiteColor: #f4f6f8;
 }
 
@@ -122,17 +123,17 @@ main p {
   gap: 3rem;
 }
 
-.nav-container li:hover {
+/* .nav-container li:hover {
   transform: scale(1.07);
   transition: transform 0.2s;
-}
+} */
 
 .nav-links {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
   color: var(--primaryColor);
-  transition: color 0.2s;
+  transition: color 0.5s;
 }
 
 .nav-links:hover {
@@ -149,14 +150,14 @@ main p {
   gap: 7.5px;
   cursor: pointer;
   flex-direction: column;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .hamburger div {
   width: 37px;
   height: 4px;
   background-color: var(--primaryColor);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .hamburger.active div:nth-child(1) {
@@ -243,7 +244,7 @@ main p {
 
 .start:hover {
   cursor: pointer;
-  background-color: #02458b;
+  background-color: var(--hoverColor);
 }
 
 .social-container {
@@ -346,7 +347,7 @@ main p {
   animation: 35s slide infinite linear;
 }
 
-.skill-slide img {
+.skill-slide svg {
   margin: 0 40px;
   margin-bottom: 10px;
 }
@@ -354,6 +355,11 @@ main p {
 .skill-item {
   display: inline-block;
   text-align: center;
+}
+
+.skill-item svg path:hover {
+  transition: fill 0.5s ease;
+  fill: var(--tertiaryColor);
 }
 
 @keyframes slide {
@@ -458,28 +464,28 @@ main p {
   text-decoration: none;
   color: var(--tertiaryColor);
   font-size: 1.1rem;
-  transition: color 0.3s;
+  transition: color 0.5s ease;
   display: flex;
   align-items: center;
   gap: 0.2rem;
 }
 
 .see-live:hover {
-  color: var(--tertiaryColor);
+  color: var(--hoverColor);
 }
 
 .source-code {
   text-decoration: none;
   font-size: 1.1rem;
   color: var(--tertiaryColor);
-  transition: color 0.3s;
+  transition: color 0.5s ease;
   display: flex;
   align-items: center;
   gap: 0.2rem;
 }
 
 .source-code:hover {
-  color: var(--tertiaryColor);
+  color: var(--hoverColor);
 }
 
 /* CONTACT STARTS HERE */
@@ -550,13 +556,13 @@ form h2 {
   border: none;
   border-radius: 5px;
   color: #f8f9fa;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.5s, background-color 0.5s;
   font-size: 1.2rem;
   font-family: inherit;
 }
 
 .submit:hover {
-  background-color: #02458b;
+  background-color: var(--hoverColor);
   cursor: pointer;
 }
 
@@ -588,7 +594,7 @@ form h2 {
   margin-right: 1rem;
   margin-top: 0.2rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .closebtn:hover {
@@ -618,11 +624,11 @@ form h2 {
 }
 
 .social-row a svg path {
-  transition: fill 0.3s ease;
+  transition: fill 0.5s ease;
 }
 
 .social-row a:hover svg path {
-  fill: #343a40;
+  fill: var(--tertiaryColor);
 }
 
 /* FOOTER STARTS HERE */
@@ -646,7 +652,7 @@ form h2 {
     background-color: #f8f9fa;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.5s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
