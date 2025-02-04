@@ -66,14 +66,14 @@ form h2:after {
 }
 
 .headers {
-  max-width: 1024px;
+  max-width: 1180px;
 }
 
 .aboutSec,
 .projectsSec,
 .contactSec {
-  max-width: 1024px;
-  padding: 3rem 1.2rem;
+  max-width: 1180px;
+  padding: 5rem 1.2rem;
 }
 
 /* MAIN STARTS HERE */
@@ -496,6 +496,7 @@ main p {
   margin: 0 auto;
   flex-wrap: wrap;
   gap: 10rem;
+  justify-content: center;
 }
 
 form h2 {
