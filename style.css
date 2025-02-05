@@ -539,6 +539,7 @@ form h2 {
   border: none;
   background-color: transparent;
   font-size: 1rem;
+  min-width: 0;
 }
 
 #name:focus,
@@ -568,8 +569,10 @@ form h2 {
   color: #f8f9fa;
   transition: transform 0.5s, background-color 0.5s;
   font-size: 1rem;
+  padding: 0.8rem;
   font-family: inherit;
-  width: 25%;
+  justify-self: flex-start;
+  /* width: 40%; */
 }
 
 .submit:hover {
