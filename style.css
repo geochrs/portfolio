@@ -501,7 +501,7 @@ main p {
 
 .inner-contact {
   display: flex;
-  flex: 1;
+  flex: 1 1 50%;
 }
 
 .inner-contact form {
@@ -619,7 +619,7 @@ form h2 {
   display: flex;
   gap: 1.5rem;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1 50%;
 }
 
 .contact-info p {
