@@ -10,6 +10,9 @@ window.addEventListener('scroll', function () {
     navbar.style.transform = `translateY(0%)`;
   } else if (currScrollPos > prevScrollPos) {
     navbar.style.transform = `translateY(-105%)`;
+    if (navContainer.classList.contains('active')) {
+      closeMenu();
+    }
   } else {
     navbar.style.transform = `translateY(0%)`;
     navbar.style.boxShadow = `0 2px 4px rgba(0, 0, 0, 0.1)`;
@@ -92,5 +95,8 @@ closebtn.addEventListener('click', function () {
   this.parentElement.classList.remove('alertOn');
 });
 
-const copy = document.querySelector(".skill-slide").cloneNode(true);
-document.querySelector(".skill-container").appendChild(copy);
+const copy = document.querySelector('.skill-slide').cloneNode(true);
+document.querySelector('.skill-container').appendChild(copy);
+
+window.addEventListener('scroll', closeMenu);
+

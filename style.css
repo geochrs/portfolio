@@ -28,6 +28,10 @@ body {
   overscroll-behavior: none;
 }
 
+ul {
+  padding: 0;
+}
+
 h1,
 h2,
 h3 {
@@ -65,11 +69,15 @@ form h2:after {
   background: #f8f9fa;
 }
 
-.headers {
+/* .headers {
   max-width: 1180px;
+} */
+
+.aboutSec {
+  max-width: 1180px;
+  padding: 10rem 1.2rem 5rem;
 }
 
-.aboutSec,
 .projectsSec,
 .contactSec {
   max-width: 1180px;
@@ -175,17 +183,25 @@ main p {
 /* HEADER STARTS HERE */
 
 .headers {
-  margin: 0 auto;
+  min-height: calc(100vh - 75px);
+  overflow: hidden;
+  position: relative;
+}
+
+.inner-header {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-areas: 'name image';
-  height: 100vh;
+  max-width: 1180px;
+  margin: 0 auto;
+  align-items: center;
+  min-height: calc(100vh - 75px);
 }
 
 .headers::after {
   content: '';
   background-image: url('/icons/hero2.webp');
-  top: 80px;
+  top: 0px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -193,16 +209,13 @@ main p {
   z-index: -2;
   background-size: cover;
   background-position: center;
-  /* pointer-events: none; */
   filter: brightness(0.6);
-  height: 100vh;
 }
 
 .header-info {
   grid-area: name;
   align-self: center;
   line-height: 1.2;
-  margin: 0 auto;
 }
 
 .header-info > * {
@@ -658,6 +671,13 @@ form h2 {
   background-color: var(--primaryColor);
 }
 
+@media (width <= 1200px) {
+  .inner-header {
+    max-width: 900px;
+    grid-template-columns: repeat(2, minmax(600px, 1fr));
+  }
+}
+
 @media (width <=900px) {
   .nav-container {
     position: fixed;
@@ -673,7 +693,7 @@ form h2 {
   }
 
   .nav-container.active {
-    top: 5rem;
+    top: 4.78rem;
   }
 
   .nav-item {
@@ -685,18 +705,17 @@ form h2 {
     padding-right: 5px;
   }
 
-  .headers {
+  .inner-header {
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-areas:
       'name'
       '';
-    height: 60vh;
   }
 
-  .headers::after {
+  /* .headers::after {
     height: 60vh;
-  }
+  } */
 
   .header-info h1 {
     font-size: 3.5rem;
@@ -744,7 +763,6 @@ form h2 {
     justify-content: center;
     gap: 2rem;
   }
-
 }
 
 @media (max-width: 576px) {
@@ -760,7 +778,10 @@ form h2 {
     padding: 0 0.5rem;
   }
 
-  .aboutSec,
+  .aboutSec {
+    padding: 4rem 0.5rem 2rem 0.5rem;
+  }
+
   .projectsSec,
   .contactSec {
     padding: 2rem 0.5rem;
