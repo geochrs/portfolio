@@ -221,7 +221,7 @@ main p {
 /* HEADER STARTS HERE */
 
 .headers {
-  min-height: calc(100vh - 75px);
+  /* min-height: calc(100vh - 75px); */
   overflow: hidden;
   position: relative;
   background: #f8f9fa;
@@ -245,6 +245,14 @@ main p {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.first-image {
+  display: block;
+}
+
+.second-image {
+  display: none;
 }
 
 .header-info {
@@ -666,9 +674,13 @@ form h2 {
   background-color: var(--primaryColor);
 }
 
-@media (width <= 1450px) {
-  .image-wrapper img {
-    max-width: 1500px;
+@media (max-width: 1200px) {
+  .first-image {
+      display: none;
+  }
+
+  .second-image {
+    display: block;
   }
 }
 
