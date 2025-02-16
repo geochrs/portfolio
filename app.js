@@ -16,7 +16,7 @@ window.addEventListener('scroll', function () {
   } else {
     navbar.style.transform = `translateY(0%)`;
     navbar.style.boxShadow = `0 2px 4px rgba(0, 0, 0, 0.1)`;
-    navbar.style.backgroundColor = '#f8f9fa';
+    // navbar.style.backgroundColor = '#f8f9fa';
   }
   prevScrollPos = currScrollPos;
 });
@@ -35,11 +35,11 @@ function activeLink() {
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       document
         .querySelector('.nav-container a[href*=' + sectionId + ']')
-        .classList.add('selected');
+        .classList.add('active');
     } else {
       document
         .querySelector('.nav-container a[href*=' + sectionId + ']')
-        .classList.remove('selected');
+        .classList.remove('active');
     }
   });
 }
@@ -95,8 +95,14 @@ closebtn.addEventListener('click', function () {
   this.parentElement.classList.remove('alertOn');
 });
 
-const copy = document.querySelector('.skill-slide').cloneNode(true);
-document.querySelector('.skill-container').appendChild(copy);
+// carousel
+const skillContainer = document.querySelector('.skill-container');
+const skillSlide = document.querySelector('.skill-slide');
+
+for (let i = 0; i < 4; i++) {
+  const copy = skillSlide.cloneNode(true);
+  skillContainer.appendChild(copy);
+}
 
 window.addEventListener('scroll', closeMenu);
 
