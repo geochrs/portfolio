@@ -29,7 +29,7 @@ function activeLink() {
   let scrollY = window.scrollY;
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 200;
+    const sectionTop = current.getBoundingClientRect().top + window.scrollY - 200;
     let sectionId = current.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
