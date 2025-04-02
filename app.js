@@ -16,7 +16,7 @@ window.addEventListener('scroll', function () {
   } else {
     navbar.style.transform = `translateY(0%)`;
     navbar.style.boxShadow = `0 2px 4px rgba(0, 0, 0, 0.1)`;
-    // navbar.style.backgroundColor = '#f8f9fa';
+    navbar.style.backgroundColor = '#f8f9fa';
   }
   prevScrollPos = currScrollPos;
 });
