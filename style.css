@@ -125,7 +125,7 @@ form h2:after {
 
 .aboutSec {
   max-width: 1500px;
-  padding: 10rem 1.2rem 2rem;
+  padding: 7rem 0 2rem;
 }
 
 .projectsSec,
@@ -370,7 +370,7 @@ main p {
 }
 
 .about-me h2 {
-  /* margin-bottom: 1rem; */
+  margin-bottom: 1rem;
   position: relative;
   padding-bottom: 0.5rem;
   display: inline-block;
@@ -393,7 +393,13 @@ main p {
   text-align: center;
 }
 
+.service-card svg {
+  margin-bottom: 20px;
+}
+
 .service-card h3 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 .personal-info {
@@ -415,8 +421,11 @@ main p {
   padding: 60px 0;
   white-space: nowrap;
   position: relative;
-  /* max-width: 1180px; */
+  max-width: 1700px;
   margin: 0 auto;
+  -webkit-mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+
 }
 
 .skill-container:before,
@@ -427,18 +436,6 @@ main p {
   height: 100%;
   content: '';
   z-index: 1;
-}
-
-.skill-container:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), #f8f9fa);
-  opacity: 0.5;
-}
-
-.skill-container:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f9fa);
-  opacity: 0.5;
 }
 
 .skill-container:hover .skill-slide {
@@ -861,16 +858,6 @@ form h2 {
 
   .contactSec {
     gap: 3rem;
-  }
-
-  .skill-container:before {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #f8f9fa);
-    width: 20%;
-  }
-
-  .skill-container:after {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f9fa);
-    width: 20%;
   }
 
   .service-card {
