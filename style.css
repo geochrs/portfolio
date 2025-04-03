@@ -58,7 +58,7 @@ h3 {
 
 .aboutSec h2:after,
 .projectsSec h2:after,
-form h2:after {
+.contactSec > h2:after {
   content: '';
   position: absolute;
   width: 50%;
@@ -95,23 +95,6 @@ form h2:after {
   overflow: hidden;
 }
 
-.sectionColor3::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('icons/stroke3.png') no-repeat center center;
-  background-size: cover;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-/* .headers {
-  max-width: 1180px;
-} */
-
 .aboutSec {
   max-width: 1500px;
   padding: 2rem 0 2rem;
@@ -141,8 +124,6 @@ main p {
   width: 100%;
   z-index: 2;
   position: sticky;
-  /* background: #f8f9fa; */
-  /* background: linear-gradient(to bottom, #cfd4da 0%, #f8f9fa 40%); */
 }
 
 .navBar {
@@ -158,8 +139,6 @@ main p {
   justify-content: flex-start;
   height: 76px;
   width: 125px;
-  /* width: 50%; */
-  /* margin: 0 auto; */
 }
 
 .nav-item {
@@ -167,7 +146,6 @@ main p {
 }
 
 .nav-container {
-  /* margin: 0 auto; */
   display: flex;
   gap: 3rem;
 }
@@ -256,7 +234,8 @@ main p {
   object-fit: cover;
   filter: brightness(0.3);
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 86%, 61% 95%, 0 91%);}
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 61% 95%, 0 91%);
+}
 
 .inner-header {
   display: flex;
@@ -359,7 +338,7 @@ main p {
 
 .service-card {
   flex: 1 1 calc(33.333% - 20px);
-  background: var(--whiteColor);
+  background: #fff;
   padding: 50px;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -552,23 +531,27 @@ main p {
 /* CONTACT STARTS HERE */
 
 .contactSec {
-  align-items: center;
-  display: flex;
   margin: 0 auto;
+}
+
+.contact-container {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .inner-contact {
   display: flex;
-  flex: 1 1 50%;
+  flex: 1 1 40%;
 }
 
 .inner-contact form {
   width: 100%;
 }
 
-form h2 {
+.contactSec > h2 {
   text-align: left;
   margin-bottom: 2rem;
   position: relative;
@@ -578,12 +561,15 @@ form h2 {
 
 .contact-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 0.5fr 1fr 0.5fr;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr 1fr 2fr 1fr 1fr;
   grid-template-areas:
-    'name email'
-    'text text'
-    'submit alert';
+    'name'
+    'email'
+    'text'
+    'submit'
+    'alert';
   gap: 1rem;
   filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.2));
 }
@@ -618,7 +604,6 @@ form h2 {
 
 .person-text {
   grid-area: text;
-  padding: 60px 0 0;
 }
 
 .submit {
@@ -683,6 +668,14 @@ form h2 {
 
 .contact-info p {
   font-size: 1rem;
+}
+
+.contact-title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .contact-row {
@@ -798,6 +791,15 @@ form h2 {
 
   .service-card {
     flex: 1 1 calc(50% - 20px);
+  }
+  
+  .inner-contact {
+    flex: 1 1 50%;
+  }
+
+  .inner-contact form {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
